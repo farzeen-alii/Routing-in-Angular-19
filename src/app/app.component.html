@@ -1,6 +1,10 @@
-<div>
-  <a routerLink="/home">Home</a> <br> <br>
-  <a routerLink="/about">About</a>
-</div>
+@if (!isDashboardRoute) {
+  <div>
+    <a routerLink="/home">Home</a> <br> <br>
+    <a routerLink="/about">About</a>
+    <button (click)="gotToDashboard()">Go to Dashboard</button>
+  </div>
+}
+
 
 <router-outlet />
