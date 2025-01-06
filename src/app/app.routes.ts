@@ -4,6 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SettingsComponent } from './settings/settings.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -12,5 +13,6 @@ export const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, children: [
     { path: 'profile', component: ProfileComponent },
     { path: 'settings', component: SettingsComponent },
-  ] }
+  ] },
+  { path: 'greeting/:name', component: GreetingComponent }
 ];
