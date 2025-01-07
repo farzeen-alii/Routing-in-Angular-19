@@ -1,0 +1,21 @@
+<div>
+  <h2>Query Params & Fragments</h2>
+  <label>Enter Your Name:</label>
+  <input type="text" [(ngModel)]="userName">
+  <button (click)="setName()">Submit</button>
+  @if(nameFromQuery){
+    <p>Hell0, {{ nameFromQuery }}</p>
+  }
+  <hr>
+  <a routerLink="/query-fragment" fragment="section1">Go to Section 1</a>
+  <a routerLink="/query-fragment" fragment="section2">Go to Section 2</a>
+  <hr>
+  <div id="section1" style="height: 300px; background-color: lightblue;">
+    <h2>Section 1</h2>
+  </div>
+  <div id="section2" style="height: 300px; background-color: lightcoral;">
+    <h2>Section 2</h2>
+  </div>
+</div>
+
+<router-outlet />
