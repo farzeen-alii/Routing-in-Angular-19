@@ -9,6 +9,7 @@ import { QueryFragmentComponent } from './query-fragment/query-fragment.componen
 import { LoginComponent } from './login/login.component';
 import { PersonalComponent } from './personal/personal.component';
 import { AuthGuard } from './auth.guard';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -21,5 +22,7 @@ export const routes: Routes = [
   { path: 'greeting/:name', component: GreetingComponent },
   { path: 'query-fragment', component: QueryFragmentComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'page-not-found', component: PageNotFoundComponent },
+  { path: '**', redirectTo: 'page-not-found' },
   { path: 'personal', component: PersonalComponent, canActivate: [AuthGuard] },
 ];

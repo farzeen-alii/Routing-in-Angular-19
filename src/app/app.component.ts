@@ -33,4 +33,8 @@ export class AppComponent {
     }
   }
 
+  isPageNotFound(): boolean{
+    return this.router.url === '/page-not-found';
+  }
+
 }
