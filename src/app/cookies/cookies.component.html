@@ -1,0 +1,9 @@
+<div>
+  <h2>Angular Cookies Example</h2>
+  <button (click)="setCookie()">Set Cookie</button>
+  <button (click)="getCookie()">Get Cookie</button>
+  <button (click)="deleteCookie()">Delete Cookie</button>
+  @if (cookieValue) {
+    <p>Cookie Value: {{ cookieValue }} </p>
+  }
+</div>

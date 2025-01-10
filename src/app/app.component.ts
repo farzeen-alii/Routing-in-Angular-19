@@ -1,10 +1,11 @@
 import { FormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterModule, RouterOutlet } from '@angular/router';
+import { CookiesComponent } from "./cookies/cookies.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule,RouterOutlet, FormsModule],
+  imports: [RouterModule, RouterOutlet, FormsModule, CookiesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
